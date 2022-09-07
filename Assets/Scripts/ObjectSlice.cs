@@ -15,8 +15,8 @@ public class ObjectSlice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
-            SliceObject();
+        //if (Input.GetMouseButton(0))
+        //    SliceObject();
     }
 
     void SliceObject()
