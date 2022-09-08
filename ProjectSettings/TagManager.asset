@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Plataforma
   - Slice
+  - Totem
+  - End
   layers:
   - Default
   - TransparentFX

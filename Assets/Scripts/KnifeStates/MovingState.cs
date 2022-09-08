@@ -33,6 +33,17 @@ public class MovingState : BaseState
             stateManager.slicingState.slicedObject = other.GetComponent<CubeObject>();
             stateManager.SwitchState(stateManager.slicingState);
         }
+
+        if (other.CompareTag("Totem"))
+        {
+            stateManager.slicingState.slicedObject = other.GetComponent<CubeObject>();
+            stateManager.knifeTouch.SliceObject(stateManager.slicingState.slicedObject);
+            stateManager.gameManager.EndGame();
+        }
+
+        if(other.CompareTag("End"))
+            stateManager.gameManager.EndGame();
+
     }
 
     public override void UpdateState(StateManager stateManager)
@@ -47,8 +58,7 @@ public class MovingState : BaseState
                 kt.Impulse(rb);
                 nextTouch = stateManager.touchRate;
             }
-            else
-                Debug.Log("Next touch not ready");
+
         }
     }
 }

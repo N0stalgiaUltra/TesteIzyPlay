@@ -5,7 +5,7 @@ using UnityEngine;
 public class KnifeTouch : MonoBehaviour
 {
     [SerializeField] private float speed;
-
+    [SerializeField] private ScoreManager scoreManager;
 
     public void Impulse(Rigidbody rb)
     {
@@ -16,6 +16,6 @@ public class KnifeTouch : MonoBehaviour
     public void SliceObject(CubeObject obj)
     {
         obj.Slice();
-        ScoreManager.instance.AddScore(obj.CubeScore);
+        scoreManager.AddScore(obj.CubeScore);
     }
 }

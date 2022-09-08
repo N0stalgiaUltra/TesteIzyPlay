@@ -6,21 +6,15 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private int playerScore;
+    [SerializeField] private int playerHighScore;
     [SerializeField] private TextMeshProUGUI scoreText;
-
-    public static ScoreManager instance;
-    private void Awake()
-    {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(instance);
-    }
+    [SerializeField] private TextMeshProUGUI highScoreText;
     
     void Start()
     {
-
         playerScore = 0;
+        playerHighScore = PlayerPrefs.GetInt("Highscore");
+        highScoreText.text = $"Highscore: {playerHighScore}";
     }
 
     // Update is called once per frame
@@ -30,4 +24,15 @@ public class ScoreManager : MonoBehaviour
     }
 
     public void AddScore(int value) => playerScore += value;
+    
+    public void SaveScore()
+    {
+        if(playerScore > playerHighScore)
+        {
+            playerHighScore = playerScore;
+            PlayerPrefs.SetInt("Highscore", playerHighScore);
+            PlayerPrefs.Save();
+        }
+        
+    }
 }

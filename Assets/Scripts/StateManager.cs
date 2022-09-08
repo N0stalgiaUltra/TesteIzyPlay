@@ -6,7 +6,8 @@ public class StateManager : MonoBehaviour
 {
     [Header("Needed Components")]
     [SerializeField] private Rigidbody rb;
-    [SerializeField] public KnifeTouch knifeTouch;
+    public KnifeTouch knifeTouch;
+    public GameManager gameManager;
     public float touchRate;
 
     [Header("Knife States")]

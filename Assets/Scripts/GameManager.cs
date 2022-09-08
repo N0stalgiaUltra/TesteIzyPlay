@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Button startButton;
+    [SerializeField] private ScoreManager scoreManager;
+    private void Awake()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        //startButton.onClick.AddListener(StartGame);
+        StartGame();
+    }
+
+
+    public void StartGame()
+    {
+        Time.timeScale = 1;
+    }
+
+    public void EndGame()
+    {
+        scoreManager.SaveScore();
+        Time.timeScale = 0;
     }
 }

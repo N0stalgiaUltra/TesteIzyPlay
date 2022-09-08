@@ -92,6 +92,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963260, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_TagString
+      value: Totem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963262, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7cec830f17888364a9c407205c6c5e71, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
 --- !u!4 &7941126477053377236 stripped
@@ -158,6 +166,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963260, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_TagString
+      value: Totem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963262, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbab00a6ff1b2204cafc50a989ac12a5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
 --- !u!4 &1029334246890270005 stripped
@@ -224,6 +240,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963260, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_TagString
+      value: Totem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963262, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b0732a086ca2ff43b9c3a58b5d93520, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
 --- !u!4 &975483419097656203 stripped
