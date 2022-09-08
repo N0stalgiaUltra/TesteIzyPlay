@@ -9,19 +9,24 @@ public class CubeDistanceCheck : MonoBehaviour
 
     public void CheckCubeDistance(List<ObjectSlice> cubeList)
     {
-        if (cubeList.Count.Equals(0))
-            return;
-        else
-        {
-            for (int i = 0; i < cubeList.Count; i++)
-            {
-                if (Vector3.Distance(this.gameObject.transform.position, cubeList[i].gameObject.transform.position) <= distance)
-                {
-                    print("perto");
-                    stateManager.ObjectSliceRef = cubeList[i];
-                }
-            }
-        }
+        //if (cubeList.Count.Equals(0))
+        //    return;
+        //else
+        //{
+        //    for (int i = 0; i < cubeList.Count; i++)
+        //    {
+        //        if (Vector3.Distance(this.gameObject.transform.position, cubeList[i].gameObject.transform.position) <= distance)
+        //        {
+        //            stateManager.knifeTouch.SliceObject(cubeList[i]);
+        //        }
+        //        else
+        //        {
+
+        //        }
+        //            //stateManager.ObjectSliceRef = null;
+
+        //    }
+        //}
 
     }
 }

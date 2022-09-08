@@ -8,12 +8,8 @@ public class ObjectSlice : MonoBehaviour
     [SerializeField] private MeshRenderer mainObject;
     [SerializeField] private GameObject leftHalf;
     [SerializeField] private GameObject rightHalf;
-    void Start()
-    {
-        SetupCube();
-    }
 
-    private void SetupCube()
+    public void SetupCube()
     {
         this.mainObject.enabled = true;
         this.gameObject.layer = LayerMask.NameToLayer("Default");
@@ -22,11 +18,12 @@ public class ObjectSlice : MonoBehaviour
 
     }
 
-    public void SliceObject()
+    public void Slice()
     {
-        this.mainObject.enabled = false;
-        this.gameObject.layer = LayerMask.NameToLayer("Inactive");
-        this.leftHalf.SetActive(true);
-        this.rightHalf.SetActive(true);  
+        print("slicing");
+        mainObject.enabled = false;
+        mainObject.gameObject.layer = LayerMask.NameToLayer("Inactive");
+        leftHalf.SetActive(true);
+        rightHalf.SetActive(true);
     }
 }

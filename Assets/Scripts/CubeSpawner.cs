@@ -19,6 +19,7 @@ public class CubeSpawner : MonoBehaviour
             for (int i = 0; i < quantity; i++)
             {
                 cubeList.Add(sliceCube);
+                cubeList[i].SetupCube();
             }
 
         }
@@ -42,7 +43,7 @@ public class CubeSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cubeDistance.CheckCubeDistance(cubeList);
+        //cubeDistance.CheckCubeDistance(cubeList);
     }
 
 

@@ -5,6 +5,8 @@ using UnityEngine;
 public class SlicingState : BaseState
 {
     Rigidbody rb;
+    public ObjectSlice slicedObject;
+    bool isSlicing;
 
     public SlicingState(Rigidbody rb)
     {
@@ -13,12 +15,13 @@ public class SlicingState : BaseState
 
     public override void EnterState(StateManager stateManager)
     {
-        stateManager.ObjectSliceRef.SliceObject();
+        isSlicing = true;
+
     }
 
     public override void FixedUpdateState(StateManager stateManager)
     {
-        if (rb.velocity.magnitude > 0)
+        if (rb.velocity.magnitude > 0 && !isSlicing)
             stateManager.SwitchState(stateManager.movingState);
     }
 
@@ -28,5 +31,12 @@ public class SlicingState : BaseState
 
     public override void UpdateState(StateManager stateManager)
     {
+        if (isSlicing)
+        {
+            stateManager.knifeTouch.SliceObject(slicedObject);
+            isSlicing = false;
+        }
+        else
+            return;
     }
 }

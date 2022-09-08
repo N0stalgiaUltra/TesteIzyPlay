@@ -27,7 +27,12 @@ public class MovingState : BaseState
             rb.Sleep();
         
         if (other.CompareTag("Slice"))
+        {
+            Debug.Log("collided");
+            stateManager.slicingState.slicedObject = other.GetComponent<ObjectSlice>();
             stateManager.SwitchState(stateManager.slicingState);
+
+        }
     }
 
     public override void UpdateState(StateManager stateManager)

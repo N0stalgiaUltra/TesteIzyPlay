@@ -788,7 +788,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knifeTouch: {fileID: 1653262864}
   rb: {fileID: 9151595349323623276}
-  objectSlice: {fileID: 0}
 --- !u!114 &1653262864 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1653262864, guid: 7a7d7b5fac286f746976e8efde374531, type: 3}
