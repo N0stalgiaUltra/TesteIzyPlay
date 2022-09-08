@@ -15,6 +15,7 @@ public class ScoreManager : MonoBehaviour
         playerScore = 0;
         playerHighScore = PlayerPrefs.GetInt("Highscore");
         highScoreText.text = $"Highscore: {playerHighScore}";
+
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class ScoreManager : MonoBehaviour
         if(playerScore > playerHighScore)
         {
             playerHighScore = playerScore;
+            highScoreText.text = $"Highscore: {playerHighScore}";
             PlayerPrefs.SetInt("Highscore", playerHighScore);
             PlayerPrefs.Save();
         }
