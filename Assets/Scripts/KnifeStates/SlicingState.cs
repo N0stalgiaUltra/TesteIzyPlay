@@ -5,17 +5,15 @@ using UnityEngine;
 public class SlicingState : BaseState
 {
     Rigidbody rb;
-    ObjectSlice objectSlice;
 
-    public SlicingState(Rigidbody rb, ObjectSlice objectSlice)
+    public SlicingState(Rigidbody rb)
     {
         this.rb = rb;
-        this.objectSlice = objectSlice;
     }
 
     public override void EnterState(StateManager stateManager)
     {
-        objectSlice.SliceObject();
+        stateManager.ObjectSliceRef.SliceObject();
     }
 
     public override void FixedUpdateState(StateManager stateManager)

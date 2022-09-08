@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,27 +6,27 @@ using UnityEngine;
 public class ObjectSlice : MonoBehaviour
 {
     [SerializeField] private MeshRenderer mainObject;
-    [SerializeField] private BoxCollider mainCollider;
-
     [SerializeField] private GameObject leftHalf;
     [SerializeField] private GameObject rightHalf;
     void Start()
     {
-        
+        SetupCube();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetupCube()
     {
-        //if (Input.GetMouseButton(0))
-        //    SliceObject();
+        this.mainObject.enabled = true;
+        this.gameObject.layer = LayerMask.NameToLayer("Default");
+        this.leftHalf.SetActive(false);
+        this.rightHalf.SetActive(false);
+
     }
 
     public void SliceObject()
     {
-        mainObject.enabled = false;
+        this.mainObject.enabled = false;
         this.gameObject.layer = LayerMask.NameToLayer("Inactive");
-        leftHalf.SetActive(true);
-        rightHalf.SetActive(true);  
+        this.leftHalf.SetActive(true);
+        this.rightHalf.SetActive(true);  
     }
 }

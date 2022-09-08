@@ -13,7 +13,6 @@ public class MovingState : BaseState
     }
     public override void EnterState(StateManager stateManager)
     {
-        //rb.isKinematic = false;
     }
 
     public override void FixedUpdateState(StateManager stateManager)

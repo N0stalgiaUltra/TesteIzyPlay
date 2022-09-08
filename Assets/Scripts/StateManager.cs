@@ -5,8 +5,9 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     [SerializeField] private KnifeTouch knifeTouch;
-    [SerializeField] private ObjectSlice objectSlice;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private ObjectSlice objectSlice;
+
 
     [Header("Knife States")]
     private BaseState currentState;
@@ -19,7 +20,7 @@ public class StateManager : MonoBehaviour
     {
         idleState = new IdleState(rb, knifeTouch);
         movingState = new MovingState(rb, knifeTouch);
-        slicingState = new SlicingState(rb, objectSlice);
+        slicingState = new SlicingState(rb);
     }
     void Start()
     {
@@ -49,4 +50,5 @@ public class StateManager : MonoBehaviour
         currentState.OnTriggerEnter(this, other);
     }
 
+    public ObjectSlice ObjectSliceRef { get => objectSlice;  set => objectSlice = value; }
 }
