@@ -29,7 +29,7 @@ public class MovingState : BaseState
         if (other.CompareTag("Slice"))
         {
             Debug.Log("collided");
-            stateManager.slicingState.slicedObject = other.GetComponent<ObjectSlice>();
+            stateManager.slicingState.slicedObject = other.GetComponent<CubeObject>();
             stateManager.SwitchState(stateManager.slicingState);
 
         }

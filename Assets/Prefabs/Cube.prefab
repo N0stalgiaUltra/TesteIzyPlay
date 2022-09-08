@@ -130,6 +130,7 @@ MonoBehaviour:
   mainObject: {fileID: 5400789311055963262}
   leftHalf: {fileID: 5400789311381503893}
   rightHalf: {fileID: 5400789312674293279}
+  scoreData: {fileID: 11400000, guid: af7047e0ba413e74da570e2ee4813f2a, type: 2}
 --- !u!1 &5400789311381503893
 GameObject:
   m_ObjectHideFlags: 0

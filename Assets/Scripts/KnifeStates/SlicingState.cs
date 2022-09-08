@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlicingState : BaseState
 {
     Rigidbody rb;
-    public ObjectSlice slicedObject;
+    public CubeObject slicedObject;
     bool isSlicing;
 
     public SlicingState(Rigidbody rb)

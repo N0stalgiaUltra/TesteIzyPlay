@@ -13,8 +13,9 @@ public class KnifeTouch : MonoBehaviour
         rb.AddTorque(Vector3.right * speed, ForceMode.Impulse);
     }
 
-    public void SliceObject(ObjectSlice obj)
+    public void SliceObject(CubeObject obj)
     {
         obj.Slice();
+        ScoreManager.instance.AddScore(obj.CubeScore);
     }
 }

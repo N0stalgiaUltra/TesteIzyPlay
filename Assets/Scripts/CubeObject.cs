@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectSlice : MonoBehaviour
+public class CubeObject : MonoBehaviour
 {
     [SerializeField] private MeshRenderer mainObject;
     [SerializeField] private GameObject leftHalf;
     [SerializeField] private GameObject rightHalf;
+    [SerializeField] private ScoreData scoreData;
 
     public void SetupCube()
     {
@@ -20,10 +21,11 @@ public class ObjectSlice : MonoBehaviour
 
     public void Slice()
     {
-        print("slicing");
         mainObject.enabled = false;
         mainObject.gameObject.layer = LayerMask.NameToLayer("Inactive");
         leftHalf.SetActive(true);
         rightHalf.SetActive(true);
     }
+
+    public int CubeScore { get => scoreData.score; }
 }

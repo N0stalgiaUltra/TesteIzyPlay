@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class CubeSpawner : MonoBehaviour
 {
-    [SerializeField] private ObjectSlice sliceCube;
-    [SerializeField] private List<ObjectSlice> cubeList = new List<ObjectSlice>();
+    [SerializeField] private CubeObject sliceCube;
+    [SerializeField] private List<CubeObject> cubeList = new List<CubeObject>();
     [SerializeField] private List<Transform> spawnList = new List<Transform>(6);
     [SerializeField] private int quantity;
-
-    [SerializeField] private CubeDistanceCheck cubeDistance;
     void Awake()
     {
         if (quantity.Equals(0))
@@ -28,7 +26,7 @@ public class CubeSpawner : MonoBehaviour
 
     private void Start()
     {
-        if (quantity.Equals(0))
+        if (quantity.Equals(0) || spawnList.Count.Equals(0))
             return;
         else
         {
@@ -38,12 +36,6 @@ public class CubeSpawner : MonoBehaviour
             }
 
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //cubeDistance.CheckCubeDistance(cubeList);
     }
 
 
