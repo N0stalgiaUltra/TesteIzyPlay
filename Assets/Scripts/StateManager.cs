@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-    [SerializeField] public KnifeTouch knifeTouch;
+    [Header("Needed Components")]
     [SerializeField] private Rigidbody rb;
+    [SerializeField] public KnifeTouch knifeTouch;
+    public float touchRate;
 
     [Header("Knife States")]
     private BaseState currentState;

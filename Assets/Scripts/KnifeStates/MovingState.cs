@@ -6,6 +6,7 @@ public class MovingState : BaseState
 {
     Rigidbody rb;
     KnifeTouch kt;
+    float nextTouch;
     public MovingState(Rigidbody knifeRB, KnifeTouch knifeTouch)
     {
         rb = knifeRB;
@@ -13,6 +14,7 @@ public class MovingState : BaseState
     }
     public override void EnterState(StateManager stateManager)
     {
+        nextTouch = stateManager.touchRate;
     }
 
     public override void FixedUpdateState(StateManager stateManager)
@@ -35,9 +37,18 @@ public class MovingState : BaseState
 
     public override void UpdateState(StateManager stateManager)
     {
-        if (Input.GetMouseButtonDown(0))
+        nextTouch -= Time.deltaTime;
+
+        if(Input.touchCount > 0)
         {
-            kt.Impulse(rb);
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began && nextTouch <= 0)
+            {
+                kt.Impulse(rb);
+                nextTouch = stateManager.touchRate;
+            }
+            else
+                Debug.Log("Next touch not ready");
         }
     }
 }
