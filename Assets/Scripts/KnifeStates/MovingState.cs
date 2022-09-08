@@ -24,18 +24,17 @@ public class MovingState : BaseState
 
     public override void OnTriggerEnter(StateManager stateManager, Collider other)
     {
-
-        Debug.Log(other.tag);
         if (other.CompareTag("Plataforma"))
-            rb.isKinematic = true;
-
+            rb.Sleep();
+        
+        if (other.CompareTag("Slice"))
+            stateManager.SwitchState(stateManager.slicingState);
     }
 
     public override void UpdateState(StateManager stateManager)
     {
         if (Input.GetMouseButtonDown(0))
         {
-            rb.isKinematic = false;
             kt.Impulse(rb);
         }
     }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObjectSlice : MonoBehaviour
 {
     [SerializeField] private MeshRenderer mainObject;
+    [SerializeField] private BoxCollider mainCollider;
+
     [SerializeField] private GameObject leftHalf;
     [SerializeField] private GameObject rightHalf;
     void Start()
@@ -19,9 +21,10 @@ public class ObjectSlice : MonoBehaviour
         //    SliceObject();
     }
 
-    void SliceObject()
+    public void SliceObject()
     {
         mainObject.enabled = false;
+        this.gameObject.layer = LayerMask.NameToLayer("Inactive");
         leftHalf.SetActive(true);
         rightHalf.SetActive(true);  
     }

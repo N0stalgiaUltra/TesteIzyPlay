@@ -18,11 +18,9 @@ public class IdleState : BaseState
     public override void FixedUpdateState(StateManager stateManager)
     {
         if (rb.velocity.magnitude > 0)
-        {
-            Debug.Log("Mudei para o moving state");
             stateManager.SwitchState(stateManager.movingState);
 
-        }
+        
     }
 
     public override void UpdateState(StateManager stateManager)

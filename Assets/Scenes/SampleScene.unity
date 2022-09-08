@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 371284819}
   - component: {fileID: 371284818}
   - component: {fileID: 371284817}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -631,6 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knifeTouch: {fileID: 1653262864}
+  objectSlice: {fileID: 1737895017}
   rb: {fileID: 9151595349323623276}
 --- !u!114 &1653262864 stripped
 MonoBehaviour:
@@ -647,6 +648,22 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9156311088531801296, guid: 7a7d7b5fac286f746976e8efde374531, type: 3}
   m_PrefabInstance: {fileID: 9151595349323623275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1737895017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5400789311055963202, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+  m_PrefabInstance: {fileID: 5400789312196375393}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ae00d8c2d8ffb48ba14ac8d1970c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1737895019 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5400789311055963263, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+  m_PrefabInstance: {fileID: 5400789312196375393}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2009591975
 GameObject:
@@ -756,12 +773,24 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5400789311055963200, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963200, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963200, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963200, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5400789311055963200, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.4
+      value: 37.1
       objectReference: {fileID: 0}
     - target: {fileID: 5400789311055963200, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -795,13 +824,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963202, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: mainCollider
+      value: 
+      objectReference: {fileID: 1737895019}
     - target: {fileID: 5400789311055963260, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
     - target: {fileID: 5400789311055963260, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963260, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_TagString
+      value: Slice
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963262, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311055963263, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311381503892, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311381503893, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789311381503894, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789312674293278, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789312674293279, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400789312674293472, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e357254f8a3bd4d81f83ee51ef44b0, type: 3}
@@ -832,9 +901,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knife
       objectReference: {fileID: 0}
+    - target: {fileID: 9152265105941873920, guid: 7a7d7b5fac286f746976e8efde374531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9153002721407165098, guid: 7a7d7b5fac286f746976e8efde374531, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9156311088531801296, guid: 7a7d7b5fac286f746976e8efde374531, type: 3}
       propertyPath: m_RootOrder

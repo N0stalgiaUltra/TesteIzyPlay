@@ -15,21 +15,20 @@ public class SlicingState : BaseState
 
     public override void EnterState(StateManager stateManager)
     {
-        throw new System.NotImplementedException();
+        objectSlice.SliceObject();
     }
 
     public override void FixedUpdateState(StateManager stateManager)
     {
-        throw new System.NotImplementedException();
+        if (rb.velocity.magnitude > 0)
+            stateManager.SwitchState(stateManager.movingState);
     }
 
     public override void OnTriggerEnter(StateManager stateManager, Collider other)
     {
-        throw new System.NotImplementedException();
     }
 
     public override void UpdateState(StateManager stateManager)
     {
-        throw new System.NotImplementedException();
     }
 }
